@@ -3,6 +3,24 @@
         <title>Bugbug Games</title>
     <body>
         <h1>Welcome to Bugbug Games</h1>
-        <p>Bugbug games is a game site where you can play the one and only click games to get started. </p>
+        <input type="image" id='pizza' src="http://toninospizzaandpasta.com/wp-content/uploads/2014/04/pizza-page.png" width="72" height="41" onclick="myFunction();" />
+        <input id="Old Grannie" type="submit" name="button" onclick="oldGrannie();" value="enter"/>
+        <p id="amount">0 Pizza's</p>
+
+        <script>
+            var amount = 0;
+            function myFunction(){
+                amount ++;
+                document.getElementById("amount").innerHTML= amount + " Pizzas";
+            };
+            function oldGrannie(){
+                if(amount >= 10){
+                   alert("congratulations"); 
+                }
+                else{
+                    alert("not enough pizzas")
+                }
+            }
+        </script>
     </body>
 </html>
