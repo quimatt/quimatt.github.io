@@ -6,16 +6,20 @@
         <input type="image" id='pizza' src="http://toninospizzaandpasta.com/wp-content/uploads/2014/04/pizza-page.png" width="72" height="41" onclick="myFunction();" />
         <input id="Old Grannie" type="submit" name="button" onclick="oldGrannie();" value="enter"/>
         <p id="amount">0 Pizza's</p>
+        <p id="p/s"></p>
 
         <script>
             var amount = 0;
+            var oldGrannies = 0;
             function myFunction(){
                 amount ++;
                 document.getElementById("amount").innerHTML= amount + " Pizzas";
             };
             function oldGrannie(){
                 if(amount >= 10){
-                   alert("congratulations"); 
+                    oldGrannies ++;
+                    amount - 10;
+                    document.getElementById("p/s").innerHTML= oldGrannies * 1 + " pizzas per second"
                 }
                 else{
                     alert("not enough pizzas")
