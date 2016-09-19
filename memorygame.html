@@ -6,15 +6,6 @@
 <body>
    <h1>Welcome To Memory Animals </h1>
    <p>Welcome to memory animals where you can test your memory. When you are ready press start and the cards will flash then turn over. Then they will show a animal down the bottom before turning all the cards over and back down when you select the same cards as the bottom card. </p>
-   <p id="pet"</p>
-
-<<<<<<< Updated upstream
-   <script>
-      var pets = Array[dog,cat,fish,bird]
-      document.getElementById("pet").innerHTML=pets;
-=======
-<h1>Welcome To Memory Game</h1>
-<p>The cards will flip once revealing all the cards. Then a card down the bottom will apear this is the target card and you have to try and collect all of these cards. The cards will flip over once more and once they turn around you have to pick the cards. Press start to begin.</p>
     <input type="button" value="Start" onClick="start()">
     <div></div>
     <input type="image" src="http://www.drodd.com/images15/question-mark22.gif" width = "125px" name="saveForm"  id = "c1">
@@ -34,9 +25,11 @@
     <input type="image" src="http://www.drodd.com/images15/question-mark22.gif" width = "125px" name="saveForm" id = "c15">
     <input type="image" src="http://www.drodd.com/images15/question-mark22.gif" width = "125px" name="saveForm" id = "c16">
     <div></div>
+    
     <input type="image" src="http://www.drodd.com/images15/question-mark22.gif" width = "125px" name="saveForm">
     <p id="card"></p>
     <script>
+        document.getElementById("pet").innerHTML=pets;
         var items = Array("dog","cat","fish","bird");
         var item = items[Math.floor(Math.random()*items.length)];
         var c1 = items[Math.floor(Math.random()*items.length)];
@@ -71,9 +64,5 @@
             alert("");
         }
     </script>
->>>>>>> Stashed changes
-
-      
-   </script>
 </body>
 </html>
