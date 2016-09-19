@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Memory Game</title>
+</head>
+<body>
+   <h1>Welcome To Memory Animals </h1>
+   <p>Welcome to memory animals where you can test your memory. When you are ready press start and the cards will flash then turn over. Then they will show a animal down the bottom before turning all the cards over and back down when you select the same cards as the bottom card. </p>
+    <input type="button" value="Start" onClick="start()">
+    <div></div>
+    <input type="image" src="http://www.drodd.com/images15/question-mark22.gif" width = "125px" name="saveForm"  id = "c1">
+    <input type="image" src="http://www.drodd.com/images15/question-mark22.gif" width = "125px" name="saveForm" id = "c2">
+    <input type="image" src="http://www.drodd.com/images15/question-mark22.gif" width = "125px" name="saveForm" id = "c3">
+    <input type="image" src="http://www.drodd.com/images15/question-mark22.gif" width = "125px" name="saveForm" id = "c4">    
+    <input type="image" src="http://www.drodd.com/images15/question-mark22.gif" width = "125px" name="saveForm" id = "c5">
+    <input type="image" src="http://www.drodd.com/images15/question-mark22.gif" width = "125px" name="saveForm" id = "c6">    
+    <input type="image" src="http://www.drodd.com/images15/question-mark22.gif" width = "125px" name="saveForm" id = "c7">
+    <input type="image" src="http://www.drodd.com/images15/question-mark22.gif" width = "125px" name="saveForm" id = "c8">    
+    <input type="image" src="http://www.drodd.com/images15/question-mark22.gif" width = "125px" name="saveForm" id = "c9">
+    <input type="image" src="http://www.drodd.com/images15/question-mark22.gif" width = "125px" name="saveForm" id = "c10">    
+    <input type="image" src="http://www.drodd.com/images15/question-mark22.gif" width = "125px" name="saveForm" id = "c11">
+    <input type="image" src="http://www.drodd.com/images15/question-mark22.gif" width = "125px" name="saveForm" id = "c12">    
+    <input type="image" src="http://www.drodd.com/images15/question-mark22.gif" width = "125px" name="saveForm" id = "c13">
+    <input type="image" src="http://www.drodd.com/images15/question-mark22.gif" width = "125px" name="saveForm" id = "c14">    
+    <input type="image" src="http://www.drodd.com/images15/question-mark22.gif" width = "125px" name="saveForm" id = "c15">
+    <input type="image" src="http://www.drodd.com/images15/question-mark22.gif" width = "125px" name="saveForm" id = "c16">
+    <div></div>
+    
+    <input type="image" src="http://www.drodd.com/images15/question-mark22.gif" width = "125px" name="saveForm">
+    <p id="card"></p>
+    <script>
+        document.getElementById("pet").innerHTML=pets;
+        var items = Array("dog","cat","fish","bird");
+        var item = items[Math.floor(Math.random()*items.length)];
+        var c1 = items[Math.floor(Math.random()*items.length)];
+        var c2 = items[Math.floor(Math.random()*items.length)];
+        var c3 = items[Math.floor(Math.random()*items.length)];
+        var c4 = items[Math.floor(Math.random()*items.length)];
+        var c5 = items[Math.floor(Math.random()*items.length)];
+        var c6 = items[Math.floor(Math.random()*items.length)];
+        var c7 = items[Math.floor(Math.random()*items.length)];
+        var c8 = items[Math.floor(Math.random()*items.length)];
+        var c9 = items[Math.floor(Math.random()*items.length)];
+        var c10 = items[Math.floor(Math.random()*items.length)];
+        var c11 = items[Math.floor(Math.random()*items.length)];
+        var c12 = items[Math.floor(Math.random()*items.length)];
+        var c13 = items[Math.floor(Math.random()*items.length)];
+        var c14 = items[Math.floor(Math.random()*items.length)];
+        var c15 = items[Math.floor(Math.random()*items.length)];
+        var c16 = items[Math.floor(Math.random()*items.length)];
+        function start(){
+            var time = d.getTime();  
+            alert("working");
+            item = items[Math.floor(Math.random()*items.length)];
+            document.getElementById("c1").src="http://r.ddmcdn.com/s_f/o_1/cx_633/cy_0/cw_1725/ch_1725/w_720/APL/uploads/2014/11/too-cute-doggone-it-video-playlist.jpg";
+        }
+    </script>
+</body>
+</html>
