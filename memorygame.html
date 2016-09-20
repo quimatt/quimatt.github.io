@@ -25,15 +25,12 @@
     <input type="image" src="http://www.drodd.com/images15/question-mark22.gif" width = "125px" name="saveForm" id = "c15">
     <input type="image" src="http://www.drodd.com/images15/question-mark22.gif" width = "125px" name="saveForm" id = "c16">
     <div></div>
-    
-    <input type="image" src="http://www.drodd.com/images15/question-mark22.gif" width = "125px" name="saveForm">
-    <p id="card"></p>
+   
     <script>
-        document.getElementById("pet").innerHTML=pets;
-        var items = Array("dog","cat","fish","bird");
+        var items = Array("dog","cat","bird","fish");
         var item = items[Math.floor(Math.random()*items.length)];
-        var c1 = items[Math.floor(Math.random()*items.length)];
-        var c2 = items[Math.floor(Math.random()*items.length)];
+        var c1 = "dog";
+        var c2 = "dog";
         var c3 = items[Math.floor(Math.random()*items.length)];
         var c4 = items[Math.floor(Math.random()*items.length)];
         var c5 = items[Math.floor(Math.random()*items.length)];
@@ -49,10 +46,24 @@
         var c15 = items[Math.floor(Math.random()*items.length)];
         var c16 = items[Math.floor(Math.random()*items.length)];
         function start(){
-            var time = d.getTime();  
-            alert("working");
-            item = items[Math.floor(Math.random()*items.length)];
-            document.getElementById("c1").src="http://r.ddmcdn.com/s_f/o_1/cx_633/cy_0/cw_1725/ch_1725/w_720/APL/uploads/2014/11/too-cute-doggone-it-video-playlist.jpg";
+            if(c1 === "dog"){
+                document.getElementById("c1").src="images/dog.jpg";
+            } else if(c1 === "cat"){
+                document.getElementById("c1").src="images/cat.jpg";
+            } else if(c1 === "fish"){
+                document.getElementById("c1").src="images/fish.jpg";
+            } else if(c1 === "bird"){
+                document.getElementById("c1").src="images/bird.jpg";
+            }
+            if(c2 == "dog"){
+                document.getElementById("c2").src="images/dog.jpg";
+            } else if(c2 === "cat"){
+                document.getElementById("c2").src="images/cat.jpg";
+            } else if(c2 === "fish"){
+                document.getElementById("c2").src="images/fish.jpg";
+            } else{
+                document.getElementById("c2").src="images/bird.jpg";
+            }
         }
     </script>
 </body>
