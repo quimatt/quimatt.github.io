@@ -8,29 +8,30 @@
    <p>Welcome to memory animals where you can test your memory. When you are ready press start and the cards will flash then turn over. Then they will show a animal down the bottom before turning all the cards over and back down when you select the same cards as the bottom card. </p>
     <input type="button" value="Start" onClick="start()">
     <div></div>
-    <input type="image" src="http://www.drodd.com/images15/question-mark22.gif" width = "125px" name="saveForm"  id = "c1">
-    <input type="image" src="http://www.drodd.com/images15/question-mark22.gif" width = "125px" name="saveForm" id = "c2">
-    <input type="image" src="http://www.drodd.com/images15/question-mark22.gif" width = "125px" name="saveForm" id = "c3">
-    <input type="image" src="http://www.drodd.com/images15/question-mark22.gif" width = "125px" name="saveForm" id = "c4">    
-    <input type="image" src="http://www.drodd.com/images15/question-mark22.gif" width = "125px" name="saveForm" id = "c5">
-    <input type="image" src="http://www.drodd.com/images15/question-mark22.gif" width = "125px" name="saveForm" id = "c6">    
-    <input type="image" src="http://www.drodd.com/images15/question-mark22.gif" width = "125px" name="saveForm" id = "c7">
-    <input type="image" src="http://www.drodd.com/images15/question-mark22.gif" width = "125px" name="saveForm" id = "c8">    
-    <input type="image" src="http://www.drodd.com/images15/question-mark22.gif" width = "125px" name="saveForm" id = "c9">
-    <input type="image" src="http://www.drodd.com/images15/question-mark22.gif" width = "125px" name="saveForm" id = "c10">    
-    <input type="image" src="http://www.drodd.com/images15/question-mark22.gif" width = "125px" name="saveForm" id = "c11">
-    <input type="image" src="http://www.drodd.com/images15/question-mark22.gif" width = "125px" name="saveForm" id = "c12">    
-    <input type="image" src="http://www.drodd.com/images15/question-mark22.gif" width = "125px" name="saveForm" id = "c13">
-    <input type="image" src="http://www.drodd.com/images15/question-mark22.gif" width = "125px" name="saveForm" id = "c14">    
-    <input type="image" src="http://www.drodd.com/images15/question-mark22.gif" width = "125px" name="saveForm" id = "c15">
-    <input type="image" src="http://www.drodd.com/images15/question-mark22.gif" width = "125px" name="saveForm" id = "c16">
+    <input type="image" src="images/qmark.jpg" width = "125px" name="saveForm"  id = "c1">
+    <input type="image" src="images/qmark.jpg" width = "125px" name="saveForm" id = "c2">
+    <input type="image" src="images/qmark.jpg" width = "125px" name="saveForm" id = "c3">
+    <input type="image" src="images/qmark.jpg" width = "125px" name="saveForm" id = "c4">    
+    <input type="image" src="images/qmark.jpg" width = "125px" name="saveForm" id = "c5">
+    <input type="image" src="images/qmark.jpg" width = "125px" name="saveForm" id = "c6">    
+    <input type="image" src="images/qmark.jpg" width = "125px" name="saveForm" id = "c7">
+    <input type="image" src="images/qmark.jpg" width = "125px" name="saveForm" id = "c8">    
+    <input type="image" src="images/qmark.jpg" width = "125px" name="saveForm" id = "c9">
+    <input type="image" src="images/qmark.jpg" width = "125px" name="saveForm" id = "c10">    
+    <input type="image" src="images/qmark.jpg" width = "125px" name="saveForm" id = "c11">
+    <input type="image" src="images/qmark.jpg" width = "125px" name="saveForm" id = "c12">    
+    <input type="image" src="images/qmark.jpg" width = "125px" name="saveForm" id = "c13">
+    <input type="image" src="images/qmark.jpg" width = "125px" name="saveForm" id = "c14">    
+    <input type="image" src="images/qmark.jpg" width = "125px" name="saveForm" id = "c15">
+    <input type="image" src="images/qmark.jpg" width = "125px" name="saveForm" id = "c16">
     <div></div>
+    <input type="image" src="images/qmark.jpg" width = "125px" name="saveForm" id = "item">
    
     <script>
         var items = Array("dog","cat","bird","fish");
         var item = items[Math.floor(Math.random()*items.length)];
-        var c1 = "dog";
-        var c2 = "dog";
+        var c1 = items[Math.floor(Math.random()*items.length)];
+        var c2 = items[Math.floor(Math.random()*items.length)];
         var c3 = items[Math.floor(Math.random()*items.length)];
         var c4 = items[Math.floor(Math.random()*items.length)];
         var c5 = items[Math.floor(Math.random()*items.length)];
@@ -63,6 +64,139 @@
                 document.getElementById("c2").src="images/fish.jpg";
             } else{
                 document.getElementById("c2").src="images/bird.jpg";
+            }
+            if(c3 == "dog"){
+                document.getElementById("c3").src="images/dog.jpg";
+            } else if(c3 === "cat"){
+                document.getElementById("c3").src="images/cat.jpg";
+            } else if(c3 === "fish"){
+                document.getElementById("c3").src="images/fish.jpg";
+            } else{
+                document.getElementById("c3").src="images/bird.jpg";
+            }
+                        if(c4 == "dog"){
+                document.getElementById("c4").src="images/dog.jpg";
+            } else if(c4 === "cat"){
+                document.getElementById("c4").src="images/cat.jpg";
+            } else if(c4 === "fish"){
+                document.getElementById("c4").src="images/fish.jpg";
+            } else{
+                document.getElementById("c4").src="images/bird.jpg";
+            }
+                        if(c5 == "dog"){
+                document.getElementById("c5").src="images/dog.jpg";
+            } else if(c5 === "cat"){
+                document.getElementById("c5").src="images/cat.jpg";
+            } else if(c5 === "fish"){
+                document.getElementById("c5").src="images/fish.jpg";
+            } else{
+                document.getElementById("c5").src="images/bird.jpg";
+            }
+                        if(c6 == "dog"){
+                document.getElementById("c6").src="images/dog.jpg";
+            } else if(c6 === "cat"){
+                document.getElementById("c6").src="images/cat.jpg";
+            } else if(c6 === "fish"){
+                document.getElementById("c6").src="images/fish.jpg";
+            } else{
+                document.getElementById("c6").src="images/bird.jpg";
+            }
+                        if(c7 == "dog"){
+                document.getElementById("c7").src="images/dog.jpg";
+            } else if(c7 === "cat"){
+                document.getElementById("c7").src="images/cat.jpg";
+            } else if(c7 === "fish"){
+                document.getElementById("c7").src="images/fish.jpg";
+            } else{
+                document.getElementById("c7").src="images/bird.jpg";
+            }
+                    if(c8 == "dog"){
+                document.getElementById("c8").src="images/dog.jpg";
+            } else if(c8 === "cat"){
+                document.getElementById("c8").src="images/cat.jpg";
+            } else if(c8 === "fish"){
+                document.getElementById("c8").src="images/fish.jpg";
+            } else{
+                document.getElementById("c8").src="images/bird.jpg";
+            }
+                    if(c9 == "dog"){
+                document.getElementById("c8").src="images/dog.jpg";
+            } else if(c9 === "cat"){
+                document.getElementById("c8").src="images/cat.jpg";
+            } else if(c9 === "fish"){
+                document.getElementById("c8").src="images/fish.jpg";
+            } else{
+                document.getElementById("c8").src="images/bird.jpg";
+            }
+                    if(c10 == "dog"){
+                document.getElementById("c9").src="images/dog.jpg";
+            } else if(c10 === "cat"){
+                document.getElementById("c9").src="images/cat.jpg";
+            } else if(c10 === "fish"){
+                document.getElementById("c9").src="images/fish.jpg";
+            } else{
+                document.getElementById("c9").src="images/bird.jpg";
+            }
+                    if(c11 == "dog"){
+                document.getElementById("c10").src="images/dog.jpg";
+            } else if(c11 === "cat"){
+                document.getElementById("c10").src="images/cat.jpg";
+            } else if(c11 === "fish"){
+                document.getElementById("c10").src="images/fish.jpg";
+            } else{
+                document.getElementById("c10").src="images/bird.jpg";
+            }
+                    if(c12 == "dog"){
+                document.getElementById("c11").src="images/dog.jpg";
+            } else if(c12 === "cat"){
+                document.getElementById("c11").src="images/cat.jpg";
+            } else if(c12 === "fish"){
+                document.getElementById("c11").src="images/fish.jpg";
+            } else{
+                document.getElementById("c11").src="images/bird.jpg";
+            }
+                    if(c13 == "dog"){
+                document.getElementById("c12").src="images/dog.jpg";
+            } else if(c13 === "cat"){
+                document.getElementById("c12").src="images/cat.jpg";
+            } else if(c13 === "fish"){
+                document.getElementById("c12").src="images/fish.jpg";
+            } else{
+                document.getElementById("c12").src="images/bird.jpg";
+            }
+                   if(c14 == "dog"){
+                document.getElementById("c13").src="images/dog.jpg";
+            } else if(c14 === "cat"){
+                document.getElementById("c13").src="images/cat.jpg";
+            } else if(c14 === "fish"){
+                document.getElementById("c13").src="images/fish.jpg";
+            } else{
+                document.getElementById("c13").src="images/bird.jpg";
+            }       if(c15 == "dog"){
+                document.getElementById("c14").src="images/dog.jpg";
+            } else if(c15 === "cat"){
+                document.getElementById("c14").src="images/cat.jpg";
+            } else if(c15 === "fish"){
+                document.getElementById("c14").src="images/fish.jpg";
+            } else{
+                document.getElementById("c14").src="images/bird.jpg";
+            }      if(c16 == "dog"){
+                document.getElementById("c15").src="images/dog.jpg";
+            } else if(c16 === "cat"){
+                document.getElementById("c15").src="images/cat.jpg";
+            } else if(c16 === "fish"){
+                document.getElementById("c15").src="images/fish.jpg";
+            } else{
+                document.getElementById("c15").src="images/bird.jpg";
+            }
+                   if(c16 == "dog"){
+                document.getElementById("c16").src="images/dog.jpg";
+            } else if(c16 === "cat"){
+                document.getElementById("c16").src="images/cat.jpg";
+            } else if(c16 === "fish"){
+                document.getElementById("c16").src="images/fish.jpg";
+            } else{
+                document.getElementById("c16").src="images/bird.jpg";
             }
         }
     </script>
