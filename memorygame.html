@@ -46,6 +46,37 @@
         var c14 = items[Math.floor(Math.random()*items.length)];
         var c15 = items[Math.floor(Math.random()*items.length)];
         var c16 = items[Math.floor(Math.random()*items.length)];
+        function selection(){
+            document.getElementById("item").src="images/qmark.jpg"
+        }
+        function keyCard(){
+            document.getElementById("c1").src="images/qmark.jpg";
+            document.getElementById("c2").src="images/qmark.jpg"; 
+            document.getElementById("c3").src="images/qmark.jpg"; 
+            document.getElementById("c4").src="images/qmark.jpg"; 
+            document.getElementById("c5").src="images/qmark.jpg"; 
+            document.getElementById("c6").src="images/qmark.jpg"; 
+            document.getElementById("c7").src="images/qmark.jpg"; 
+            document.getElementById("c8").src="images/qmark.jpg"; 
+            document.getElementById("c9").src="images/qmark.jpg"; 
+            document.getElementById("c10").src="images/qmark.jpg"; 
+            document.getElementById("c11").src="images/qmark.jpg"; 
+            document.getElementById("c12").src="images/qmark.jpg"; 
+            document.getElementById("c13").src="images/qmark.jpg"; 
+            document.getElementById("c14").src="images/qmark.jpg"; 
+            document.getElementById("c15").src="images/qmark.jpg"; 
+            document.getElementById("c16").src="images/qmark.jpg"; 
+            if(item === "dog"){
+                document.getElementById("item").src="images/dog.jpg"; 
+            } else if(item === "cat"){
+                document.getElementById("item").src="images/cat.jpg";
+            } else if(item === "fish"){
+                document.getElementById("item").src="images/fish.jpg";
+            } else {
+                document.getElementById("item").src="images/bird.jpg";
+            }
+            setTimeout(selection, 2000)
+        }
         function start(){
             if(c1 === "dog"){
                 document.getElementById("c1").src="images/dog.jpg";
@@ -198,6 +229,7 @@
             } else{
                 document.getElementById("c16").src="images/bird.jpg";
             }
+            setTimeout(keyCard, 5000);
         }
     </script>
 </body>
