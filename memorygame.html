@@ -7,6 +7,7 @@
    <h1>Welcome To Memory Animals </h1>
    <p>Welcome to memory animals where you can test your memory. When you are ready press start and the cards will flash then turn over. Then they will show a animal down the bottom before turning all the cards over and back down when you select the same cards as the bottom card. </p>
     <input type="button" value="Start" onClick="start()">
+    <p id="score">Score</p>
     <div></div>
     <input type="image" src="images/qmark.jpg" width = "125px" name="saveForm"  id = "c1">
     <input type="image" src="images/qmark.jpg" width = "125px" name="saveForm" id = "c2">
@@ -46,8 +47,266 @@
         var c14 = items[Math.floor(Math.random()*items.length)];
         var c15 = items[Math.floor(Math.random()*items.length)];
         var c16 = items[Math.floor(Math.random()*items.length)];
+        var score = 0;
+        var c1selected = 0;
+        var c2selected = 0;
+        var c3selected = 0;
+        var c4selected = 0;
+        var c5selected = 0;
+        var c6selected = 0;
+        var c7selected = 0;
+        var c8selected = 0;
+        var c9selected = 0;
+        var c10selected = 0;
+        var c11selected = 0;
+        var c12selected = 0;
+        var c13selected = 0;
+        var c14selected = 0;
+        var c15selected = 0;
+        var c16selected = 0;
         function selection(){
             document.getElementById("item").src="images/qmark.jpg";
+            document.getElementById("c1").onclick = function() {
+                if(c1 === item){
+                    if(c1selected === 0){
+                        score+=10;
+                        document.getElementById("score").innerHTML="Score: " + score;
+                        c1selected++;
+                    }
+                    
+                } else{
+                    if(c1selected === 0){
+                        score-=10;
+                        document.getElementById("score").innerHTML="Score: " + score;
+                        c1selected++;
+                    }
+                }
+            };
+                document.getElementById("c2").onclick = function() {
+                if(c2 === item){
+                    if(c2selected === 0){
+                        score+=10;
+                        document.getElementById("score").innerHTML="Score: " + score;
+                        c2selected++;
+                    }
+                } else{
+                    if(c2selected === 0){
+                        score-=10;
+                        document.getElementById("score").innerHTML="Score: " + score;
+                        c2selected++;
+                    }
+                }
+            };
+                document.getElementById("c3").onclick = function() {
+                if(c3 === item){
+                    if(c3selected === 0){
+                        score+=10;
+                        document.getElementById("score").innerHTML="Score: " + score;
+                        c3selected++;
+                    }
+                } else{
+                    if(c3selected === 0){
+                        score-=10;
+                        document.getElementById("score").innerHTML="Score: " + score;
+                        c3selected++;
+                    }
+                }
+            };
+                document.getElementById("c4").onclick = function() {
+                if(c4 === item){
+                    if(c4selected === 0){
+                        score+=10;
+                        document.getElementById("score").innerHTML="Score: " + score;
+                        c4selected++;
+                    }
+                } else{
+                    if(c4selected === 0){
+                        score-=10;
+                        document.getElementById("score").innerHTML="Score: " + score;
+                        c4selected++;
+                    }
+                }
+            };
+                document.getElementById("c5").onclick = function() {
+                if(c5 === item){
+                    if(c5selected === 0){
+                        score+=10;
+                        document.getElementById("score").innerHTML="Score: " + score;
+                        c5selected++;
+                    }
+                } else{
+                    if(c5selected === 0){
+                        score-=10;
+                        document.getElementById("score").innerHTML="Score: " + score;
+                        c5selected++;
+                    }
+                }
+            };
+                document.getElementById("c6").onclick = function() {
+                if(c6 === item){
+                    if(c6selected === 0){
+                        score+=10;
+                        document.getElementById("score").innerHTML="Score: " + score;
+                        c6selected++;
+                    }
+                } else{
+                    if(c6selected === 0){
+                        score-=10;
+                        document.getElementById("score").innerHTML="Score: " + score;
+                        c6selected++;
+                    }
+                }
+            };
+                document.getElementById("c7").onclick = function() {
+                if(c7 === item){
+                    if(c7selected === 0){
+                        score+=10;
+                        document.getElementById("score").innerHTML="Score: " + score;
+                        c7selected++;
+                    }
+                } else{
+                    if(c7selected === 0){
+                        score-=10;
+                        document.getElementById("score").innerHTML="Score: " + score;
+                        c7selected++;
+                    }
+                }
+            };
+                document.getElementById("c8").onclick = function() {
+                if(c8 === item){
+                    if(c8selected === 0){
+                        score+=10;
+                        document.getElementById("score").innerHTML="Score: " + score;
+                        c8selected++;
+                    }
+                } else{
+                    if(c8selected === 0){
+                        score-=10;
+                        document.getElementById("score").innerHTML="Score: " + score;
+                        c8selected++;
+                    }
+                }
+            };
+                document.getElementById("c9").onclick = function() {
+                    if(c9selected === item){
+                        if(c9selected === 0){
+                            score+=10;
+                            document.getElementById("score").innerHTML="Score: " + score;
+                            c9selected++;
+                        }
+                    } else{
+                    if(c9selected === 0){
+                        score-=10;
+                        document.getElementById("score").innerHTML="Score: " + score;
+                        c9selected++;
+                    }
+                     }
+            };
+                document.getElementById("c10").onclick = function() {
+                if(c10 === item){
+                    if(c10selected === 0){
+                        score+=10;
+                        document.getElementById("score").innerHTML="Score: " + score;
+                        c10selected++;
+                    }
+                } else{
+                    if(c10selected === 0){
+                        score-=10;
+                        document.getElementById("score").innerHTML="Score: " + score;
+                        c10selected++;
+                    }
+                }
+            };
+                document.getElementById("c11").onclick = function() {
+                if(c11 === item){
+                     if(c11selected === 0){
+                        score+=10;
+                        document.getElementById("score").innerHTML="Score: " + score;
+                        c11selected++;
+                    }
+                } else{
+                    if(c11selected === 0){
+                        score-=10;
+                        document.getElementById("score").innerHTML="Score: " + score;
+                        c11selected++;
+                    }
+                }
+            };
+                document.getElementById("c12").onclick = function() {
+                if(c12 === item){
+                    if(c12selected === 0){
+                        score+=10;
+                        document.getElementById("score").innerHTML="Score: " + score;
+                        c12selected++;
+                    }
+                } else{
+                    if(c12selected === 0){
+                        score-=10;
+                        document.getElementById("score").innerHTML="Score: " + score;
+                        c12selected++;
+                    }
+                }
+            };
+                document.getElementById("c13").onclick = function() {
+                if(c13 === item){
+                    if(c13selected === 0){
+                        score+=10;
+                        document.getElementById("score").innerHTML="Score: " + score;
+                        c13selected++;
+                    }
+                } else{
+                    if(c13selected === 0){
+                        score-=10;
+                        document.getElementById("score").innerHTML="Score: " + score;
+                        c13selected++;
+                    }
+                }
+            };
+                document.getElementById("c14").onclick = function() {
+                if(c14 === item){
+                    if(c14selected === 0){
+                        score+=10;
+                        document.getElementById("score").innerHTML="Score: " + score;
+                        c14selected++;
+                    }
+                } else{
+                    if(c14selected === 0){
+                        score-=10;
+                        document.getElementById("score").innerHTML="Score: " + score;
+                        c14selected++;
+                    }
+                }
+            };
+                document.getElementById("c15").onclick = function() {
+                if(c15 === item){
+                    if(c15selected === 0){
+                        score+=10;
+                        document.getElementById("score").innerHTML="Score: " + score;
+                        c15selected++;
+                    }
+                } else{
+                    if(c15selected === 0){
+                        score-=10;
+                        document.getElementById("score").innerHTML="Score: " + score;
+                        c15selected++;
+                    }
+                }
+            };
+                document.getElementById("c16").onclick = function() {
+                if(c16 === item){
+                    if(c16selected === 0){
+                        score+=10;
+                        document.getElementById("score").innerHTML="Score: " + score;
+                        c16selected++;
+                    }
+                } else{
+                    if(c16selected === 0){
+                        score-=10;
+                        document.getElementById("score").innerHTML="Score: " + score;
+                        c16selected++;
+                    }
+                }
+            };
         }
         function keyCard(){
             document.getElementById("c1").src="images/qmark.jpg";
