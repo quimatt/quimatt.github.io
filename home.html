@@ -4,7 +4,7 @@
     <body>
         <h1>Welcome to Bugbug Games</h1>
         <input type="image" id='pizza' src="http://toninospizzaandpasta.com/wp-content/uploads/2014/04/pizza-page.png" width="72" height="41" onclick="myFunction();" />
-        <input id="Old Grannie" type="submit" name="button" onclick="oldGrannie();" value="enter"/>
+        <input id="Old Grannie" type="submit" name="Buy Slave" onclick="oldGrannie();" value="Buy Slave 10 Pizzas"/>
         <p id="amount">0 Pizza's</p>
         <p id="p/s"></p>
 
@@ -19,18 +19,34 @@
                 if(amount >= 10){
                     oldGrannies ++;
                     amount -= 10;
+<<<<<<< Updated upstream
                     document.getElementById("p/s").innerHTML= oldGrannies * 1 + " pizzas per second"
                     document.getElementById("amount").innerHTML = amount + " pizzas"; 
                     var persecond = oldGrannies;
+=======
+                    document.getElementById("p/s").innerHTML= oldGrannies * 1 + " pizzas per second";
+                    document.getElementById("amount").innerHTML = amount + " pizzas";
+>>>>>>> Stashed changes
                 }
                 else{
                     alert("not enough pizzas")
                 }
             }
             setInterval(second,1000);
+<<<<<<< Updated upstream
             function second (){
                   amount += persecond;
              }
+=======
+            function second(){
+                if(oldGrannies >= 1){
+                    amount += oldGrannies;
+                    document.getElementById("amount").innerHTML = amount + " pizzas";
+                }
+
+            }
+
+>>>>>>> Stashed changes
         </script>
     </body>
 </html>
