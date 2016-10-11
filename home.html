@@ -20,7 +20,8 @@
                     oldGrannies ++;
                     amount -= 10;
                     document.getElementById("p/s").innerHTML= oldGrannies * 1 + " pizzas per second"
-                    document.getElementById("amount").innerHTML = amount + " pizzas";
+                    document.getElementById("amount").innerHTML = amount + " pizzas"; 
+                    var persecond = oldGrannies;
                 }
                 else{
                     alert("not enough pizzas")
@@ -28,7 +29,7 @@
             }
             setInterval(second,1000);
             function second (){
-                  amount += oldGrannies;
+                  amount += persecond;
              }
         </script>
     </body>
