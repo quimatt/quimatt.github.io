@@ -19,25 +19,15 @@
                 if(amount >= 10){
                     oldGrannies ++;
                     amount -= 10;
-<<<<<<< Updated upstream
-                    document.getElementById("p/s").innerHTML= oldGrannies * 1 + " pizzas per second"
+                    document.getElementById("p/s").innerHTML= oldGrannies * 1 + " pizzas per second";
                     document.getElementById("amount").innerHTML = amount + " pizzas"; 
                     var persecond = oldGrannies;
-=======
-                    document.getElementById("p/s").innerHTML= oldGrannies * 1 + " pizzas per second";
-                    document.getElementById("amount").innerHTML = amount + " pizzas";
->>>>>>> Stashed changes
                 }
                 else{
                     alert("not enough pizzas")
                 }
             }
             setInterval(second,1000);
-<<<<<<< Updated upstream
-            function second (){
-                  amount += persecond;
-             }
-=======
             function second(){
                 if(oldGrannies >= 1){
                     amount += oldGrannies;
@@ -45,8 +35,6 @@
                 }
 
             }
-
->>>>>>> Stashed changes
         </script>
     </body>
 </html>
