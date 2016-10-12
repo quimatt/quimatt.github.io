@@ -6,13 +6,15 @@
     <body>
         <h1>Welcome to Bugbug Games</h1>
         <input type="image" id='pizza' src="http://toninospizzaandpasta.com/wp-content/uploads/2014/04/pizza-page.png" width="72" height="41" onclick="myFunction();" />
-        <input id="Old Grannie" type="submit" name="Buy Slave" onclick="oldGrannie();" value="Buy Slave 10 Pizzas"/>
+        <input id="Old Grannie" type="submit" name="Buy Slave" onclick="oldGrannie();" value="Buy Slave"/>
+        <p id = "cost"></p>
         <p id="amount">0 Pizza's</p>
         <p id="p/s"></p>
 
         <script>
             var amount = 0;
             var oldGrannies = 0;
+            var cost1 = 10;
             function myFunction(){
                 amount ++;
                 document.getElementById("amount").innerHTML= amount + " Pizzas";
@@ -21,15 +23,29 @@
                 if(amount >= 10){
                     oldGrannies ++;
                     amount -= 10;
+<<<<<<< HEAD
                     document.getElementById("p/s").innerHTML= oldGrannies * 1 + " pizzas per second";
                     document.getElementById("amount").innerHTML = amount + " pizzas"; 
                     var persecond = oldGrannies;
+=======
+                    cost1 +=5;
+                    document.getElementById("p/s").innerHTML= oldGrannies * 1 + " pizzas per second"
+                    document.getElementById("amount").innerHTML = amount + " pizzas"; 
+                    var persecond = oldGrannies;
+                    var cost = cost1;
+>>>>>>> origin/master
                 }
                 else{
                     alert("not enough pizzas")
                 }
             }
             setInterval(second,1000);
+<<<<<<< HEAD
+=======
+            function second (){
+                  amount += persecond;
+             }
+>>>>>>> origin/master
             function second(){
                 if(oldGrannies >= 1){
                     amount += oldGrannies;
@@ -37,6 +53,10 @@
                 }
 
             }
+<<<<<<< HEAD
+=======
+            document.getElementById("cost").innerHTML = cost + " pizzas";
+>>>>>>> origin/master
         </script>
     </body>
 </html>
