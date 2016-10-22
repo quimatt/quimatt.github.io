@@ -4,14 +4,17 @@
 <title>Racing Derby</title>
 </head>
 <body>
+  <img src="images/cat.jpg">
   <script>
   var posx = 0;
   var posy = 0;
-  function start(x){
-    if(x === 1){
-      var up = setInterval(frame,10);
-      
-    }
+   function myMove() {
+      var pic = document.getElementById("image"); 
+      var up = setInterval(frame, 10);
+      function frame() {
+              posy++; 
+              pic.style.top = posy + 'px';  
+      }
   }
   </script>
 </body>
