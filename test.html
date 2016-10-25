@@ -1,1 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+    <script>
+        var posx = 0;
+        var posy = 0;
+        document.onkeydown = checkKey;
 
+        function checkKey(e) {
+
+            e = e || window.event;
+
+            if (e.keyCode == '38') {
+                posy++;
+            }
+            else if (e.keyCode == '40') {
+                posy--;
+            }
+            else if (e.keyCode == '37') {
+                posx--;
+            }
+            else if (e.keyCode == '39') {
+                posx++;
+            }
+
+        }
+    </script>
+</body>
+</html>
