@@ -2,8 +2,21 @@
 <html>
 <head>
 <title>Racing Derby</title>
+ <link rel="stylesheet" type="text/css" href="home.css">
 </head>
 <body>
-
+  <img src="images/cat.jpg" id="image">
+  <script>
+  var posx = 0;
+  var posy = 0;
+   function myMove() {
+      var pic = document.getElementById("image"); 
+      var up = setInterval(frame, 10);
+      function frame() {
+              posy++; 
+              pic.style.top = posy + 'px';  
+      }
+  }
+  </script>
 </body>
 </html>
