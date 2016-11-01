@@ -4,9 +4,11 @@
 <title>Page Title</title>
 </head>
 <body>
+    <img src="images/cat.jpg" width="100px" id="pic">
     <script>
         var posx = 0;
         var posy = 0;
+        var pic = document.getElementById("pic");
         document.onkeydown = checkKey;
 
         function checkKey(e) {
@@ -27,6 +29,8 @@
             }
 
         }
+        
+        pic.style.left = "200px";
     </script>
 </body>
 </html>
