@@ -2,35 +2,43 @@
 <html>
 <head>
 <title>Page Title</title>
+    <link rel="stylesheet" type="text/css" href="home.css">
 </head>
 <body>
     <img src="images/cat.jpg" width="100px" id="pic">
     <script>
         var posx = 0;
-        var posy = 0;
+        var posy = 200;
+        var right;
+        var left;
         var pic = document.getElementById("pic");
         document.onkeydown = checkKey;
-
+        function aniright(){
+            posx+=5;
+            pic.style.left = posx + 'px';
+        }
+        function anileft(){
+            posx-=5;
+            pic.style.left = posx + 'px';
+            clearInterval(left);
+        }
         function checkKey(e) {
 
             e = e || window.event;
 
             if (e.keyCode == '38') {
-                posy++;
-            }
-            else if (e.keyCode == '40') {
-                posy--;
+                posy-=2;
             }
             else if (e.keyCode == '37') {
-                posx--;
+                left = setInterval(anileft,100);
+                clearInterval(right);
             }
             else if (e.keyCode == '39') {
-                posx++;
+                right = setInterval(aniright,100);
             }
-
         }
+
         
-        pic.style.left = "200px";
     </script>
 </body>
 </html>
