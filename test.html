@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="home.css">
 </head>
 <body>
-    <img src="images/cat.jpg" width="100px" id="pic">
+    <img src="images/Troll.png" width="100px" id="pic">
     <script>
         var posx = 0;
         var posy = 200;
@@ -14,27 +14,42 @@
         var pic = document.getElementById("pic");
         document.onkeydown = checkKey;
         function aniright(){
-            posx+=5;
+            posx+=2;
             pic.style.left = posx + 'px';
         }
         function anileft(){
-            posx-=5;
+            posx-=2;
             pic.style.left = posx + 'px';
-            clearInterval(left);
+        }
+        function aniup(){
+            posy-=2;
+            pic.style.top = posy + 'px';
+            if(posy < 150){
+                clearInterval(up);
+                down = setInterval(anidown,10);
+            }
+        }
+        function anidown(){
+            posy+=2;
+            pic.style.top = posy + 'px';
+            if(posy > 200){
+                clearInterval(down);
+            }
         }
         function checkKey(e) {
 
             e = e || window.event;
 
             if (e.keyCode == '38') {
-                posy-=2;
+                up = setInterval(aniup,10);
             }
             else if (e.keyCode == '37') {
-                left = setInterval(anileft,100);
+                left = setInterval(anileft,10);
                 clearInterval(right);
             }
             else if (e.keyCode == '39') {
-                right = setInterval(aniright,100);
+                right = setInterval(aniright,10);
+                clearInterval(left);
             }
         }
 
