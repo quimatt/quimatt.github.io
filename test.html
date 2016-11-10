@@ -6,26 +6,68 @@
 </head>
 <body>
     <img src="images/Troll.png" width="100px" id="pic">
-    <img src="cat.jpeg" width="50px" id="pic">
+    <img src="cat.jpeg" width="25px" id="obs1">
+    <img src="cat.jpeg" width="50px" id="obs2">
     <script>
         var posx = 0;
         var posy = 200;
         var right;
         var left;
         var pic = document.getElementById("pic");
+        var obstacle1 = document.getElementById("obs1");
+        var obstacle2 = document.getElementById("obs2");
+        obstacle1.style.left = 300 + 'px';
+        obstacle1.style.top = 225 + 'px';
+        obstacle2.style.left = 600 + 'px';
+        obstacle2.style.top = 200 + 'px';
         document.onkeydown = checkKey;
         function aniright(){
             posx+=2;
             pic.style.left = posx + 'px';
+            //checking if hitting obstacle
+            //checking x axis
+            if(posx > 250 && posx < 325){
+                //Checking Y axis
+                if(posy >= 175){
+                    alert("game over");
+                    posx=0;
+                    pic.style.left = posx + 'px';
+                }
+            }
+            if(posx > 550 && posx < 650){
+                if(posy >= 150){
+                    alert("game over");
+                    posx=0;
+                    pic.style.left = posx + 'px';
+                    
+                }
+            }
         }
         function anileft(){
             posx-=2;
             pic.style.left = posx + 'px';
+            //checking if hitting obstacle
+            //checking x axis
+            if(posx > 250 && posx < 325){
+                //Checking Y axis
+                if(posy >= 175){
+                    alert("game over");
+                    posx=0;
+                    pic.style.left = posx + 'px';
+                }
+            }
+            if(posx > 550 && posx < 650){
+                if(posy >= 150){
+                    alert("game over");
+                    posx=0;
+                    pic.style.left = posx + 'px';
+                }   
+            }
         }
         function aniup(){
             posy-=2;
             pic.style.top = posy + 'px';
-            if(posy < 125){
+            if(posy < 100){
                 clearInterval(up);
                 down = setInterval(anidown,10);
             }
@@ -54,7 +96,6 @@
                 clearInterval(left);
             }
         }
-
         
     </script>
 </body>

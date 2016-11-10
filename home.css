@@ -4,7 +4,12 @@
     height: 50px;
     position: absolute;
     background: red;
-    align: center;
     top:200px;
+}
+#obs1{
+    position: absolute;
+}
+#obs2{
+    position: absolute;
 }
 
