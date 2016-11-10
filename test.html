@@ -6,6 +6,7 @@
 </head>
 <body>
     <img src="images/Troll.png" width="100px" id="pic">
+    <img src="cat.jpeg" width="50px" id="pic">
     <script>
         var posx = 0;
         var posy = 200;
@@ -24,7 +25,7 @@
         function aniup(){
             posy-=2;
             pic.style.top = posy + 'px';
-            if(posy < 150){
+            if(posy < 125){
                 clearInterval(up);
                 down = setInterval(anidown,10);
             }
