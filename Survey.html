@@ -3,25 +3,17 @@
 <head>
 <title>Page Title</title>
 </head>
-<body onload="javascript: window.location.href='mailto:quimatt@stu.staloysius.nsw.edu.au';">
+<body>
 <form action="demo_form.asp">
   First name: <input id="form" type="text" name="fname"><br>
   What Does Christmas Mean To You: <input type="text" name="lname"><br>
   What Do You Do For Christmas: <input type="text" name="lname"><br>
   What Is The Meaning Of Christmas For You: <input type="text" name="lname"><br>
 </form>
-<input type="submit" value="Submit" onClick="myFunction">
+<input type="submit" value="Submit" onClick= onload="javascript: window.location.href='mailto:quimatt@stu.staloysius.nsw.edu.au';">
 <p id="demo"></p>
 <script>
-function myFunction{
-    var x = document.getElementById("form");
-    var text = "";
-    var i;
-    for (i = 0; i < x.length ;i++) {
-        text += x.elements[i].value + "<br>";
-    }
-    document.getElementById("demo").innerHTML = text;
-}
+
 </script>
 </body>
 </html>
