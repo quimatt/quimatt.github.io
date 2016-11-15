@@ -4,7 +4,7 @@
 <title>Page Title</title>
     <link rel="stylesheet" type="text/css" href="home.css">
 </head>
-<body onload="level1()">
+<body>
     <img src="images/Troll.png" width="100px" id="pic">
     <img src="cat.jpeg" width="25px" id="obs1">
     <img src="cat.jpeg" width="50px" id="obs2">
@@ -20,7 +20,6 @@
         function level2(){
             obstacle1.style.left = 500 + 'px';
         }
-        function level1(){
             obstacle1.style.left = 300 + 'px';
             obstacle1.style.top = 225 + 'px';
             obstacle2.style.left = 600 + 'px';
@@ -91,6 +90,7 @@
                     clearInterval(down);
                     clearInterval(down);
                 }
+            }
             
         function checkKey(e) {
 
@@ -108,8 +108,7 @@
                 clearInterval(left);
             }
         }
-        }
-        }
+        
     </script>
 </body>
 </html>
