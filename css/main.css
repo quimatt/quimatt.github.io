@@ -92,18 +92,23 @@ ul.posts li {
     }
     #item {
     margin-left: 150px;
+		width: 100px;
 }
 .top {
     margin-left: 100px;
+	width: 100px;
 }
 .t2 { 
     margin-left: 100px;
+	width: 100px;
 }
 .b2 {
     margin-left: 100px;
+	width: 100px;
 }
 .bot {
     margin-left: 100px;
+	width: 100px;
 }
 }
 
