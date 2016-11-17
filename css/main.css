@@ -43,10 +43,41 @@ ul.posts li {
 }
 
  body {
-         background-color:aquamarine ;
+     background-color:aquamarine ;
 }
-@media only screen and (max-width: 500px) {
+
+#item {
+    margin-left: 700px;
+}
+.top {
+    margin-left: 200px;
+}
+.t2 { 
+    margin-left: 200px;
+}
+.b2 {
+    margin-left: 200px;
+}
+.bot {
+    margin-left: 200px;
+}
+@media only screen and (max-width: 1876px) {
     body {
          background-color: aqua;
     }
+    #item {
+    margin-left: 60000px;
+}
+.top {
+    margin-left: 100px;
+}
+.t2 { 
+    margin-left: 100px;
+}
+.b2 {
+    margin-left: 100px;
+}
+.bot {
+    margin-left: 100px;
+}
 }
