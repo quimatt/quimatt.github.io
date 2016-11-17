@@ -19,15 +19,18 @@
         var obstacle1 = document.getElementById("obs1");
         var obstacle2 = document.getElementById("obs2");
         var width = window.innerWidth;
+        var obs1 = width/1.858;
+        var obs2 = width/1.66;
         var level = 1;
-        obstacle1.style.left = 500 + 'px';
+        obstacle1.style.left =obs1 + 'px';
         obstacle1.style.top = 225 + 'px';
-        obstacle2.style.left = 600 + 'px';
+        obstacle2.style.left = obs2 + 'px';
         obstacle2.style.top = 200 + 'px';
         function level2(){
-            obstacle1.style.left = 300 + 'px';
+            obs1 = width/2.66;
+            obstacle1.style.left = obs1 + 'px';
             obstacle1.style.top = 225 + 'px';
-            obstacle2.style.left = 600 + 'px';
+            obstacle2.style.left = obs2 + 'px';
             obstacle2.style.top = 200 + 'px';
             document.onkeydown = checkKey;
             function aniright(){
@@ -35,7 +38,7 @@
                 pic.style.left = posx + 'px';
                 //checking if hitting obstacle
                 //checking x axis
-                if(posx > 250 && posx < 325){
+                if(posx > obs1 - 50 && posx < obs1 + 25){
                     //Checking Y axis
                     if(posy >= 175){
                         alert("game over");
@@ -43,7 +46,7 @@
                         pic.style.left = posx + 'px';
                     }
                 }
-                if(posx > 550 && posx < 650){
+                if(posx > obs2 + 50 && posx < obs - 25){
                     if(posy >= 150){
                         alert("game over");
                         posx=0;
@@ -62,24 +65,28 @@
                 pic.style.left = posx + 'px';
                 //checking if hitting obstacle
                 //checking x axis
-                if(posx > 250 && posx < 325){
-                    //Checking Y axis
-                    if(posy >= 175){
-                        alert("game over");
-                        posx=0;
-                        pic.style.left = posx + 'px';
-                        window.location.reload();
+                    if(posx > obs1 - 50 && posx < obs1 + 25){
+                        //Checking Y axis
+                        if(posy >= 175){
+                            alert("game over");
+                            posx=0;
+                            pic.style.left = posx + 'px';
+                        }
+                    }
+                    if(posx > obs2 - 50 && posx < obs2){
+                        if(posy >= 150){
+                            alert("game over");
+                            posx=0;
+                            pic.style.left = posx + 'px';
+
+                        }
+                    }
+                    if(posx > width){
+                        alert("level Complete");
+                        posx = 0;
+                        level2(2);
                     }
                 }
-                if(posx > 550 && posx < 650){
-                    if(posy >= 150){
-                        alert("game over");
-                        posx=0;
-                        pic.style.left = posx + 'px';
-                        window.location.reload();
-                    }   
-                }
-            }
             function aniup(){
                 posy-=2;
                 pic.style.top = posy + 'px';
@@ -117,9 +124,9 @@
         
         function level1(){
             if(level === 1){
-                obstacle1.style.left = 500 + 'px';
+                obstacle1.style.left = obs1 + 'px';
                 obstacle1.style.top = 225 + 'px';
-                obstacle2.style.left = 600 + 'px';
+                obstacle2.style.left = obs2 + 'px';
                 obstacle2.style.top = 200 + 'px';
                 document.onkeydown = checkKey;
                 function aniright1(){
@@ -127,7 +134,7 @@
                     pic.style.left = posx + 'px';
                     //checking if hitting obstacle
                     //checking x axis
-                    if(posx > 450 && posx < 525){
+                    if(posx > obs1 - 50 && posx < obs1 + 25){
                         //Checking Y axis
                         if(posy >= 175){
                             alert("game over");
@@ -135,7 +142,7 @@
                             pic.style.left = posx + 'px';
                         }
                     }
-                    if(posx > 550 && posx < 650){
+                    if(posx > obs2 - 50 && posx < obs2){
                         if(posy >= 150){
                             alert("game over");
                             posx=0;
@@ -154,22 +161,21 @@
                     pic.style.left = posx + 'px';
                     //checking if hitting obstacle
                     //checking x axis
-                    if(posx > 450 && posx < 525){
+                    if(posx > obs1 - 50 && posx < obs1 + 25){
                         //Checking Y axis
                         if(posy >= 175){
                             alert("game over");
                             posx=0;
                             pic.style.left = posx + 'px';
-                            window.location.reload();
                         }
                     }
-                    if(posx > 550 && posx < 650){
+                    if(posx > obs2 - 50 && posx < obs2 + 50){
                         if(posy >= 150){
                             alert("game over");
                             posx=0;
                             pic.style.left = posx + 'px';
-                            window.location.reload();
-                        }   
+
+                        }
                     }
                 }
                 function aniup1(){
