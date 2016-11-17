@@ -61,6 +61,10 @@ ul.posts li {
 .bot {
     margin-left: 200px;
 }
+
+
+
+
 @media only screen and (max-width: 1876px) {
     body {
          background-color: aqua;
@@ -81,3 +85,25 @@ ul.posts li {
     margin-left: 100px;
 }
 }
+
+@media only screen and (max-width: 1000px) {
+	    body {
+         background-color: aqua;
+    }
+    #item {
+    margin-left: 150px;
+}
+.top {
+    margin-left: 100px;
+}
+.t2 { 
+    margin-left: 100px;
+}
+.b2 {
+    margin-left: 100px;
+}
+.bot {
+    margin-left: 100px;
+}
+}
+
