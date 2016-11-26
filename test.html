@@ -9,6 +9,7 @@
     <img src="images/fox.jpg" width="25px" height="25px" id="obs1">
     <img src="images/fox.jpg" width="50px" height="50px" id="obs2">
     <button onClick="level1()">Start</button>
+	<p id="pos"></p>
     <script>
         var posx = 0;
         var posy = 200;
@@ -108,7 +109,7 @@
             function anidown(){
                 posy+=2;
                 pic.style.top = posy + 'px';
-                if(posy > 200){
+                if(posy > 198){
                     clearInterval(down);
                     clearInterval(down);
                 }
@@ -119,7 +120,9 @@
             e = e || window.event;
 
             if (e.keyCode == '38') {
-                up = setInterval(aniup,10);
+				if(posy === 200){
+                	up = setInterval(aniup,10);
+				}
             }
             else if (e.keyCode == '37') {
                 left = setInterval(anileft,10);
@@ -199,7 +202,7 @@
                 function anidown(){
                     posy+=2;
                     pic.style.top = posy + 'px';
-                    if(posy > 200){
+                    if(posy > 198){
                         clearInterval(down);
                         clearInterval(down);
                     }
@@ -210,7 +213,9 @@
                 e = e || window.event;
 
                 if (e.keyCode == '38') {
-                    up = setInterval(aniup1,10);
+					if(posy === 200){
+                    	up = setInterval(aniup1,10);
+					}
                 }
                 else if (e.keyCode == '37') {
                     if(level === 1){
@@ -226,6 +231,7 @@
                 }
             }
         }
+			document.getElementById("pos").innerHTML=posy;
         }
     </script>
 </body>
