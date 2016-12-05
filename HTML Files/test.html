@@ -9,7 +9,6 @@
     <img src="images/fox.jpg" width="25px" height="25px" id="obs1">
     <img src="images/fox.jpg" width="50px" height="50px" id="obs2">
     <button onClick="level1()">Start</button>
-	<p id="pos"></p>
     <script>
         var posx = 0;
         var posy = 200;
@@ -34,7 +33,7 @@
 			obstacle2.style.left = obs2 + 'px';
 			if(posx > width){
 				level2();
-				alert("level Is Completed");
+				alert("level Completed");
 			}
 		}
         function level2(){
@@ -164,7 +163,7 @@
                         }
                     }
                     if(posx > width){
-                        alert("level is Complete");
+                        alert("level Complete");
                         posx = 0;
                         level3();
                     }
@@ -231,7 +230,6 @@
                 }
             }
         }
-			document.getElementById("pos").innerHTML=posy;
         }
     </script>
 </body>
