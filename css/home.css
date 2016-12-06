@@ -15,9 +15,11 @@
 body {
     background-color: aquamarine;
 }
-#green{
+#green {
     position: absolute;
 }
-#red{
+#red {
     position: absolute;
+    width: 50px;
+    height: 50px;
 }

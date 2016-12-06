@@ -2,11 +2,11 @@
 <html>
 <head>
     <title>Page Title</title>
-    <link rel="stylesheet" type="text/css" href="home.css">
+    <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
     <img src="images/green.jpeg" width="50px" height="50px" id="green">
-    <img src="images/red.jpg" width="50px" height="50px" id="red">
+    <img src="images/red.jpg" id="red">
     <script>
         document.onkeydown = checkKey;
         var gright;
@@ -19,40 +19,85 @@
         var rdown;
         var red = document.getElementById("red");
         var green = document.getElementById("green");
+        var greenx = 0;
+        var greeny = 0;
+        var redx = 0;
+        var redy = 0;
+        function anigdown(){
+            greeny+=0.5;
+            green.style.top = greeny + 'px';
+        }
+        function anigup(){
+            greeny-=0.5;
+            green.style.top = greeny + 'px';
+        }
+        function anigleft(){
+            greenx-=0.5;
+            green.style.left = greenx + 'px';
+        }
+        function anigright(){
+            greenx+=0.5;
+            green.style.left = greenx + 'px';
+        }
+        
+        
+        
+        
+        function anirdown(){
+            redy+=0.5;
+            red.style.top = redy + 'px';
+        }
+        function anirup(){
+            redy-=0.5;
+            red.style.top = redy + 'px';
+        }
+        function anirleft(){
+            redx-=0.5;
+            red.style.left = redx + 'px';
+        }
+        function anirright(){
+            redx+=0.5;
+            red.style.left = redx + 'px';
+        }
+        
+        
         function checkKey(e) {
             
             e = e || window.event;
             //green
             if (e.keyCode == '38') {
                 //up
-                gup = setInterval(anigup,10);
+                gup = setInterval(anigup,1);
             }
             else if (e.keyCode == '37') {
                 //left
-                gleft = setInterval(anigleft,10);
+                gleft = setInterval(anigleft,1);
             }
             else if (e.keyCode == '39') {
                 //right 
-                gright = setInterval(anigright,10);
+                gright = setInterval(anigright,1);
             }
             else if (e.keyCode == '40') {
                 //down
-                gdown = setInterval(anigdown,10);
+                gdown = setInterval(anigdown,1);
             }
             
             //red
             if (e.keyCode == '87') {
                 //up
-                rup = setInterval(anirup,10);
+                rup = setInterval(anirup,1);
             }
             else if (e.keyCode == '83') {
                 //down
+                rdown = setInterval(anirdown,1);
             }
             else if (e.keyCode == '65') {
                 //left
+                rleft = setInterval(anirleft,1);
             }
             else if (e.keyCode == '68') {
                 //right
+                rright = setInterval(anirright,1);
             }
         }
     </script>
