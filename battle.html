@@ -1,11 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Page Title</title>
+    <title>Page Title</title>
+    <link rel="stylesheet" type="text/css" href="home.css">
 </head>
 <body>
-<img src="images/green.jpeg" width="50px" height="50px">
-<img src="images/red.jpg" width="50px" height="50px">
-
+    <img src="images/green.jpeg" width="50px" height="50px" id="green">
+    <img src="images/red.jpg" width="50px" height="50px" id="red">
+    <script>
+        document.onkeydown = checkKey;
+        var gright;
+        var gleft;
+        var gup;
+        var gdown;
+        var rright;
+        var rleft;
+        var rup;
+        var rdown;
+        var red = document.getElementById("red");
+        var green = document.getElementById("green");
+        function checkKey(e) {
+            
+            e = e || window.event;
+            //green
+            if (e.keyCode == '38') {
+                //up
+                gup = setInterval(anigup,10);
+            }
+            else if (e.keyCode == '37') {
+                //left
+                gleft = setInterval(anigleft,10);
+            }
+            else if (e.keyCode == '39') {
+                //right 
+                gright = setInterval(anigright,10);
+            }
+            else if (e.keyCode == '40') {
+                //down
+                gdown = setInterval(anigdown,10);
+            }
+            
+            //red
+            if (e.keyCode == '87') {
+                //up
+                rup = setInterval(anirup,10);
+            }
+            else if (e.keyCode == '83') {
+                //down
+            }
+            else if (e.keyCode == '65') {
+                //left
+            }
+            else if (e.keyCode == '68') {
+                //right
+            }
+        }
+    </script>
 </body>
 </html>
